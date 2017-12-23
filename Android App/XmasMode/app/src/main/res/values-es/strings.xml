@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Modo Navidad</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_about">Acerca de</string>
+    <string name="about_msg">Derechos Reservados © 2017, Iván Ávalos (y feliz Navidad)</string>
+    <string name="msg_lost">Conexión perdida</string>
+</resources>
