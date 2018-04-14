@@ -1,7 +1,7 @@
-autom4te.cache
-.ropeproject
-.anjuta
+autom4te.cache/
+.ropeproject/
+.anjuta/
 .anjuta_sym_db.db
 stamp-h1
-Optimized
+Optimized/
 xmas_mode.anjuta
