@@ -1,11 +1,11 @@
 package com.apps.yuxco.xmasmode
 
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -42,16 +42,22 @@ class MainActivity : AppCompatActivity() {
     private fun xmasOn(b: Boolean) {
         if(b) {
             // UI Changes
-            llContent.background = getDrawable(R.drawable.xmas)
             tvTitle.setTextColor(Color.WHITE)
             toolbar.setBackgroundColor(resources.getColor(R.color.colorXmas))
-            window.statusBarColor = resources.getColor(R.color.colorXmas)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                llContent.background = getDrawable(R.drawable.xmas)
+                window.statusBarColor = resources.getColor(R.color.colorXmas)
+            }else{
+                llContent.background = resources.getDrawable(R.drawable.xmas)
+            }
         } else {
             // UI Changes
             llContent.background = null
             tvTitle.setTextColor(Color.DKGRAY)
             toolbar.setBackgroundColor(resources.getColor(R.color.colorPrimary))
-            window.statusBarColor = resources.getColor(R.color.colorPrimary)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                window.statusBarColor = resources.getColor(R.color.colorPrimary)
+            }
         }
     }
 
