@@ -4,9 +4,9 @@
 #include <Wire.h>
 
 // WiFi
-const char* ssid = "Totalplay-667F";
-const char* password = "667F8C66QgpDsydg";
-const char* mqtt_server = "192.168.100.14";
+const char* ssid = "<SSID>";
+const char* password = "<PASSWORD>";
+const char* mqtt_server = "<IP>";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
